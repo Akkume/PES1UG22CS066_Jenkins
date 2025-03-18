@@ -5,8 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Intentionally using a wrong file name to cause failure
-                    sh 'g++ -o output hello_wrong.cpp'
+                    sh 'g++ -o output hello.cpp'
                 }
             }
         }
@@ -32,4 +31,3 @@ pipeline {
         }
     }
 }
-
